@@ -1,0 +1,55 @@
+<div class="aplicacao">
+  <div class="container">
+    <div *ngIf="mostrarModal" class="modal" [ngClass]="{'modal is-active':mostrarModal}">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div class="field">
+            <label class="label">Nome do Produto</label>
+            <div class="control">
+              <input [(ngModel)]="nome" class="input" name="artigo" type="text" placeholder="Pixel 2">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Preço</label>
+            <div class="control">
+              <input [(ngModel)]="preco" class="input" name="valor" type="number" min="0" placeholder="1500">
+            </div>
+          </div>
+          <div class="botoes">
+            <a class="button is-success is-rounded" (click)="adicionarProduto(artigo)">Adicionar</a>
+            <a class="button is-danger is-rounded" (click)="limparFormModal()">Limpar</a>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close" (click)="fecharModal()"></button>
+    </div>
+    <p class="margem botoes">
+      <button class="button" (click)="abrirModal()">Adicionar Produto</button>
+    </p>
+  </div>
+  <ng-container *ngFor="let produto of data">
+    <div class="box">
+      <h1>{{produto.nome}}</h1>
+      <progress class="progress is-warning" value="{{produto.atingido}}" max="{{produto.valor}}">{{produto.atingido}} / {{produto.valor}}</progress>
+      <!---<div class="botoes">
+        <a class="button is-success is-rounded" (click)="mostrarAdicionarValor(produto.id)">+</a>
+        <div class="control" *ngIf="mostrarAumento">
+              <input [(ngModel)]="aumento" class="input" name="aumento" type="number" min="0" placeholder="10">
+              <a class="button is-success is-rounded">Adicionar</a>
+        </div>
+        </div>
+      -->
+        <p style="text-align: center;">Adicionar</p>
+        <div class="botoes">
+          <a class="button is-success is-rounded" (click)=adicionarCq(produto.id)>50</a>
+          <a class="button is-primary is-rounded" (click)=adicionarVc(produto.id)>25</a>
+          <a class="button is-link is-rounded" (click)=adicionarDz(produto.id)>10</a>
+          <a class="button is-info is-rounded" (click)=adicionarCin(produto.id)>5</a>
+          <a class="button is-warning is-rounded" (click)=adicionarUn(produto.id)>1</a>
+          <a class="button is-danger is-rounded" (click)=adicionarCent(produto.id)>0.10</a>
+        </div>
+      </div>
+  </ng-container>
+</div>
+

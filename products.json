@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "nome": "Adobe xd",
+      "valor": 1200,
+      "atingido": 1200,
+      "id": 1
+    },
+    {
+      "nome": "Photoshop",
+      "valor": 1200,
+      "atingido": 450,
+      "id": 2
+    }
+  ]
+}
