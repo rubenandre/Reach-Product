@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	/* URL API */
+	  /* URL API */
   	private api = 'http://localhost:3000/produtos'
 
   	/* Dados obtidos da api uteis para funções internas */
@@ -77,8 +77,6 @@ export class AppComponent {
   						atingido: atingido
   				 };
     let body = JSON.stringify(artigo);
-    console.log(body)
-    console.log(id)
     return this.http.put(this.api + '/' + id, body, options ).map((res: Response) => res.json());
   }
 
@@ -86,7 +84,6 @@ export class AppComponent {
 
   adicionarCq(id){
   	this.getById(id).subscribe(data => {
-  		console.log(data);
   		this.data = data;
   		let valorAdicionar:number = 50;
   		let valorInicial:number = data.atingido;
@@ -109,7 +106,6 @@ export class AppComponent {
 
   adicionarVc(id){
     this.getById(id).subscribe(data => {
-      console.log(data);
       this.data = data;
       let valorAdicionar:number = 25;
       let valorInicial:number = data.atingido;
@@ -132,7 +128,6 @@ export class AppComponent {
 
   adicionarDz(id){
     this.getById(id).subscribe(data => {
-      console.log(data);
       this.data = data;
       let valorAdicionar:number = 10;
       let valorInicial:number = data.atingido;
@@ -155,7 +150,6 @@ export class AppComponent {
 
   adicionarCin(id){
     this.getById(id).subscribe(data => {
-      console.log(data);
       this.data = data;
       let valorAdicionar:number = 5;
       let valorInicial:number = data.atingido;
@@ -178,7 +172,6 @@ export class AppComponent {
 
   adicionarUn(id){
     this.getById(id).subscribe(data => {
-      console.log(data);
       this.data = data;
       let valorAdicionar:number = 1;
       let valorInicial:number = data.atingido;
@@ -201,7 +194,6 @@ export class AppComponent {
 
   adicionarCent(id){
     this.getById(id).subscribe(data => {
-      console.log(data);
       this.data = data;
       let valorAdicionar:number = 0.1;
       let valorInicial:number = data.atingido;
@@ -231,7 +223,6 @@ export class AppComponent {
 
   getProdutos(){
   	this.getData().subscribe(data => {
-  		console.log(data);
   		this.data = data;
   	})
   }
@@ -242,7 +233,6 @@ export class AppComponent {
     this.mostrarModal = false
   	let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    console.log(artigo)
     let body = JSON.stringify(artigo);
     return this.http.post(this.api, body, options ).map((res: Response) => res.json());
   }

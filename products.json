@@ -3,8 +3,14 @@
     {
       "nome": "Pixel 2",
       "valor": 1500,
-      "atingido": 0,
+      "atingido": 800,
       "id": 1
+    },
+    {
+      "nome": "Macbook",
+      "valor": 1200,
+      "atingido": 51,
+      "id": 2
     }
   ]
 }

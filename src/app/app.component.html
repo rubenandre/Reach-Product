@@ -5,7 +5,7 @@
         Reach Product
       </p>
     </nav>
-    <hr style="color='#000'">
+    <hr>
     <div *ngIf="mostrarModal" class="modal" [ngClass]="{'modal is-active':mostrarModal}">
       <div class="modal-background"></div>
       <div class="modal-content">
@@ -35,7 +35,7 @@
     </p>
   </div>
   <ng-container>
-    <div class="columns" style="justify-content: center;" *ngFor="let produto of data">
+    <div class="columns centro-col" *ngFor="let produto of data">
       <div class="column is-two-fifths">
         <article class="message is-info">
           <div class="message-header">
@@ -43,13 +43,15 @@
             <button *ngIf="produto.atingido == produto.valor" (click)="removerProduto(produto.id)" class="delete"></button>
           </div>
           <div class="message-body">
+            <p class="botoes">{{produto.atingido}}€ / {{produto.valor}}€</p>
+
             <progress *ngIf="(produto.atingido < produto.valor) && (produto.atingido > +produto.valor*0.50)" class="progress is-warning" value="{{produto.atingido}}" max="{{produto.valor}}">{{produto.atingido}} / {{produto.valor}}</progress>
 
             <progress *ngIf="produto.atingido == produto.valor" class="progress is-success" value="{{produto.atingido}}" max="{{produto.valor}}">{{produto.atingido}} / {{produto.valor}}</progress>
 
             <progress *ngIf="produto.atingido < +produto.valor*0.50" class="progress is-danger" value="{{produto.atingido}}" max="{{produto.valor}}">{{produto.atingido}} / {{produto.valor}}</progress>
 
-            <p style="text-align: center;">Adicionar</p>
+            <p class="botoes">Adicionar</p>
             <div class="botoes">
               <a class="button is-success is-rounded" (click)=adicionarCq(produto.id)>50</a>
               <a class="button is-primary is-rounded" (click)=adicionarVc(produto.id)>25</a>

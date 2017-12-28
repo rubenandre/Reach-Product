@@ -1,27 +1,43 @@
-# ReachProduct
+# Reach Product
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+Após clone do projeto executar `npm install` ou `npm i`
 
-## Development server
+## Descrição do projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Gestor pessoal de produto que queremos juntar dinheiro para comprar, sendo um execelente recurso, para gerirmos quando ja poupámos para realizar a compra
 
-## Code scaffolding
+## Servidores de desenvolvimento
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para iniciar o servidor ng: `ng serve`
 
-## Build
+Para iniciar servidor json: `json-server --watch products.json`
+Caso não tenha instalado o json-server: `npm install -g json-server`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Como Utilizar
 
-## Running unit tests
+- Clonar o projeto
+- Iniciar os servidores angular e json
+- Adicionar os artigos que deseja guardar dinheiro para comprar
+- Acumular o dinheiro
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ferramentas utilizas
 
-## Running end-to-end tests
+- Angular 4
+- Json Server
+- Bulma Css
+- Fonte Dosis para o título
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Funcionalidades conhecidas
 
-## Further help
+Cores da progress bar dependendo do já acumulado:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Verde: Meta 100% concluída
+- Amarela: Meta >40% e <100%
+- Vermelha: Meta menor a 40%
+
+## Ficheiro Json
+`products.json` presente na pasta do projeto
+
+## Imagens do Projeto
+![print1](https://i.imgur.com/RwCFjVM.png)
+![print2](https://i.imgur.com/OnPJYmw.png)
