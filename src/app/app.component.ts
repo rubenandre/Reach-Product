@@ -48,6 +48,24 @@ export class AppComponent {
   		.map((res: Response) => res.json())
   }
 
+  /* Função de Remoçao de dados após termos chegado à meta */
+
+  removerService(id){
+    return this.http.delete(this.api + '/' + id);
+  }
+
+  /* Remover */
+
+  removerProduto(id){
+    if (confirm("Tem a certeza que deseja remover?")){
+      this.removerService(id).subscribe(
+        data => {
+          this.getProdutos();
+          return true
+        })
+    }
+  }
+
   /* Função de Atualização dos dados de uma id */
 
   atualizarService(id, atingido, valorTotal, produtoNome) {
@@ -221,6 +239,7 @@ export class AppComponent {
   /* Função post */
 
   createService(artigo){
+    this.mostrarModal = false
   	let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     console.log(artigo)
@@ -229,15 +248,19 @@ export class AppComponent {
   }
 
   adicionarProduto(){
-  	let artigo = {
-  					nome: this.nome,
-  					valor: this.preco,
-  					atingido: this.atingido
-  				 };
-  	this.createService(artigo).subscribe(
-  		data => {
-  			this.getProdutos();
-  			return true
-  		}
-  	)}
+    if (this.preco == null && this.nome.trim() == ""){
+      alert("Campos Inválidos")
+    } else {
+      let artigo = {
+            nome: this.nome,
+            valor: this.preco,
+            atingido: this.atingido
+           };
+      this.createService(artigo).subscribe(
+        data => {
+          this.getProdutos();
+          return true;
+        })
+      }
+    }
 }

@@ -1,34 +1,10 @@
 {
   "produtos": [
     {
-      "nome": "Adobe xd",
-      "valor": 1200,
-      "atingido": 1200,
+      "nome": "Pixel 2",
+      "valor": 1500,
+      "atingido": 0,
       "id": 1
-    },
-    {
-      "nome": "Photoshop",
-      "valor": 1200,
-      "atingido": 100,
-      "id": 2
-    },
-    {
-      "nome": "HoverBoard",
-      "valor": 120,
-      "atingido": 0,
-      "id": 3
-    },
-    {
-      "nome": "HoverBoard",
-      "valor": 120,
-      "atingido": 0,
-      "id": 4
-    },
-    {
-      "nome": "eee",
-      "valor": 222,
-      "atingido": 0,
-      "id": 5
     }
   ]
 }
