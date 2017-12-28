@@ -3,9 +3,15 @@
 }
 
 .margem {
-	margin-bottom: 5px;
+	margin-bottom: 25px;
 }
 
 .botoes{
 	text-align: center;
+}
+
+.menu {
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	font-size: 55px;
 }
