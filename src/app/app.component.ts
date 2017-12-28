@@ -87,6 +87,121 @@ export class AppComponent {
   	})
   }
 
+  /* Adiciona o valor de 25 ao parametro "atingido", a uma respetiva id */
+
+  adicionarVc(id){
+    this.getById(id).subscribe(data => {
+      console.log(data);
+      this.data = data;
+      let valorAdicionar:number = 25;
+      let valorInicial:number = data.atingido;
+      let valorTotal:number = data.valor;
+      let produtoNome:string = data.nome;
+      let valorFinal:number = (+valorInicial) + (+valorAdicionar);
+      let atingido = valorFinal;
+      if(atingido > valorTotal){
+        atingido = valorTotal;
+      }
+      this.atualizarService(id, atingido, valorTotal, produtoNome).subscribe(
+           data => {
+             this.getProdutos();
+             return true;
+           })
+    })
+  }
+
+  /* Adiciona o valor de 10 ao parametro "atingido", a uma respetiva id */
+
+  adicionarDz(id){
+    this.getById(id).subscribe(data => {
+      console.log(data);
+      this.data = data;
+      let valorAdicionar:number = 10;
+      let valorInicial:number = data.atingido;
+      let valorTotal:number = data.valor;
+      let produtoNome:string = data.nome;
+      let valorFinal:number = (+valorInicial) + (+valorAdicionar);
+      let atingido = valorFinal;
+      if(atingido > valorTotal){
+        atingido = valorTotal;
+      }
+      this.atualizarService(id, atingido, valorTotal, produtoNome).subscribe(
+           data => {
+             this.getProdutos();
+             return true;
+           })
+    })
+  }
+
+  /* Adiciona o valor de 5 ao parametro "atingido", a uma respetiva id */
+
+  adicionarCin(id){
+    this.getById(id).subscribe(data => {
+      console.log(data);
+      this.data = data;
+      let valorAdicionar:number = 5;
+      let valorInicial:number = data.atingido;
+      let valorTotal:number = data.valor;
+      let produtoNome:string = data.nome;
+      let valorFinal:number = (+valorInicial) + (+valorAdicionar);
+      let atingido = valorFinal;
+      if(atingido > valorTotal){
+        atingido = valorTotal;
+      }
+      this.atualizarService(id, atingido, valorTotal, produtoNome).subscribe(
+           data => {
+             this.getProdutos();
+             return true;
+           })
+    })
+  }
+
+  /* Adiciona o valor de 1 ao parametro "atingido", a uma respetiva id */
+
+  adicionarUn(id){
+    this.getById(id).subscribe(data => {
+      console.log(data);
+      this.data = data;
+      let valorAdicionar:number = 1;
+      let valorInicial:number = data.atingido;
+      let valorTotal:number = data.valor;
+      let produtoNome:string = data.nome;
+      let valorFinal:number = (+valorInicial) + (+valorAdicionar);
+      let atingido = valorFinal;
+      if(atingido > valorTotal){
+        atingido = valorTotal;
+      }
+      this.atualizarService(id, atingido, valorTotal, produtoNome).subscribe(
+           data => {
+             this.getProdutos();
+             return true;
+           })
+    })
+  }
+
+    /* Adiciona o valor de 25 ao parametro "atingido", a uma respetiva id */
+
+  adicionarCent(id){
+    this.getById(id).subscribe(data => {
+      console.log(data);
+      this.data = data;
+      let valorAdicionar:number = 0.1;
+      let valorInicial:number = data.atingido;
+      let valorTotal:number = data.valor;
+      let produtoNome:string = data.nome;
+      let valorFinal:number = (+valorInicial) + (+valorAdicionar);
+      let atingido = valorFinal;
+      if(atingido > valorTotal){
+        atingido = valorTotal;
+      }
+      this.atualizarService(id, atingido, valorTotal, produtoNome).subscribe(
+           data => {
+             this.getProdutos();
+             return true;
+           })
+    })
+  }
+
   /* Obtem a api */
 
   getData(){
