@@ -4,7 +4,7 @@ Após clone do projeto executar `npm install` ou `npm i`
 
 ## Descrição do projeto
 
-Gestor pessoal de produto que queremos juntar dinheiro para comprar, sendo um execelente recurso, para gerirmos quando ja poupámos para realizar a compra
+Gestor pessoal de poupanças para produtos que queremos comprar, sendo um execelente recurso, para gerirmos quanto já poupámos/temos para a obtenção do produto.
 
 ## Servidores de desenvolvimento
 
