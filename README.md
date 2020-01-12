@@ -1,43 +1,45 @@
 # Reach Product
 
-Após clone do projeto executar `npm install` ou `npm i`
+After clone, execute `npm install` or `npm i`
 
-## Descrição do projeto
+## Project Description
 
-Gestor pessoal de poupanças para produtos que queremos comprar, sendo um execelente recurso, para gerirmos quanto já poupámos/temos para a obtenção do produto.
+Personal manager of products savings. 
+
+## Dependecies
+- Json Server
+`npm install -g json-server`
 
 ## Servidores de desenvolvimento
 
-Para iniciar o servidor ng: `ng serve`
+To start ng server: `ng serve`
+To start json server: `json-server --watch products.json`
 
-Para iniciar servidor json: `json-server --watch products.json`
-Caso não tenha instalado o json-server: `npm install -g json-server`
+## How to use
 
-## Como Utilizar
+- Clone this project
+- Start angular server and json server
+- Add products to start saving
+- Saving money for this products and add this info in the application
 
-- Clonar o projeto
-- Iniciar os servidores angular e json
-- Adicionar os artigos que deseja guardar dinheiro para comprar
-- Acumular o dinheiro
-
-## Ferramentas utilizas
+## Used Tools
 
 - Angular 4
 - Json Server
 - Bulma Css
-- Fonte Dosis para o título
+- Dosis font for the title
 
-## Funcionalidades conhecidas
+## Available Fnctionalities
 
-Cores da progress bar dependendo do já acumulado:
+The color of progress bar change with the total saving
 
-- Verde: Meta 100% concluída
-- Amarela: Meta >40% e <100%
-- Vermelha: Meta menor a 40%
+- Green: Finished
+- Yellow: >40% and <100%
+- Red: <= 40%
 
-## Ficheiro Json
-`products.json` presente na pasta do projeto
+## JSON File
+`products.json` stored in the project base folder
 
-## Imagens do Projeto
+## Project Screenshoots
 ![print1](https://i.imgur.com/RwCFjVM.png)
 ![print2](https://i.imgur.com/OnPJYmw.png)
