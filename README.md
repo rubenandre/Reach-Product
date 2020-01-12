@@ -7,12 +7,12 @@ After clone, execute `npm install` or `npm i`
 Personal manager of products savings. 
 
 ## Dependecies
-- Json Server
-`npm install -g json-server`
+Json Server `npm install -g json-server`
 
 ## Servidores de desenvolvimento
 
 To start ng server: `ng serve`
+
 To start json server: `json-server --watch products.json`
 
 ## How to use
